@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56200D541F6D604900AB0881 /* OCGXPathDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 56200D531F6D604900AB0881 /* OCGXPathDictionary.m */; };
 		56AE295D1F6C267500ED59CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AE295C1F6C267500ED59CB /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		56200D521F6D604900AB0881 /* OCGXPathDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGXPathDictionary.h; sourceTree = "<group>"; };
+		56200D531F6D604900AB0881 /* OCGXPathDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGXPathDictionary.m; sourceTree = "<group>"; };
 		56AE29591F6C267500ED59CB /* OCGXPathDictionary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCGXPathDictionary; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AE295C1F6C267500ED59CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130F3586716C2D720B9ACB86 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				56200D521F6D604900AB0881 /* OCGXPathDictionary.h */,
+				56200D531F6D604900AB0881 /* OCGXPathDictionary.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		56AE29501F6C267500ED59CB = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				56AE295C1F6C267500ED59CB /* main.m */,
+				130F3586716C2D720B9ACB86 /* Classes */,
 			);
 			path = OCGXPathDictionary;
 			sourceTree = "<group>";
@@ -120,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56200D541F6D604900AB0881 /* OCGXPathDictionary.m in Sources */,
 				56AE295D1F6C267500ED59CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +265,7 @@
 				56AE29621F6C267500ED59CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
