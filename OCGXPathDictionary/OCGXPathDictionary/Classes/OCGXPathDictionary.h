@@ -38,4 +38,9 @@
 
 @interface NSDictionary (OCGXPathDictionary)
 
+- (nullable NSDictionary *)parseDictionaryWithComponents:(NSString *_Nonnull)object, ... NS_REQUIRES_NIL_TERMINATION;
+
+- (nullable NSDictionary *)parseDictionaryWithObjects:(NSArray *_Nonnull)objects;
+
+
 @end
