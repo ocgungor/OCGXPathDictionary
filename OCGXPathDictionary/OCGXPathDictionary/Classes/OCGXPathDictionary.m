@@ -38,4 +38,31 @@
 
 @implementation NSDictionary (OCGXPathDictionary)
 
+- (id)parseDictionaryWithComponents:(NSString *)object, ... {
+    NSMutableArray *objects = [NSMutableArray new];
+    va_list ap;
+    va_start(ap, object);
+    while (object) {
+        [objects addObject:object];
+        object = va_arg(ap, id);
+    }
+    va_end(ap);
+    return [self parseDictionaryWithObjects:objects.copy];
+}
+
+- (nullable id)parseDictionaryWithXPath:(NSString *)xPath {
+    return [self parseDictionaryWithObjects:[xPath componentsSeparatedByString:@"/"]];
+}
+
+- (id)parseDictionaryWithObjects:(NSArray *)objects {
+    NSMutableArray *xpathArray = [NSMutableArray arrayWithArray:objects];
+    NSString *firstObject = xpathArray.firstObject;
+    id childDictionary = self[firstObject];
+    if (xpathArray.count > 1) {
+        [xpathArray removeObjectAtIndex:0];
+        return [childDictionary parseDictionaryWithObjects:xpathArray.copy];
+    }
+    return childDictionary;
+}
+
 @end
