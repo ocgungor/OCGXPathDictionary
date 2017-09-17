@@ -40,7 +40,8 @@
 
 - (nullable id)parseDictionaryWithComponents:(NSString *_Nonnull)object, ... NS_REQUIRES_NIL_TERMINATION;
 
-- (nullable id)parseDictionaryWithObjects:(NSArray *_Nonnull)objects;
+- (nullable id)parseDictionaryWithXPath:(NSString *_Nonnull)xPath;
 
+- (nullable id)parseDictionaryWithObjects:(NSArray *_Nonnull)objects;
 
 @end
